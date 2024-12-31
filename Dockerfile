@@ -57,3 +57,7 @@ RUN echo $'export SECRET_KEY_BASE=$(cat /home/devel/.secret_key_base)' \
   >> /home/devel/.bashrc
 
 WORKDIR /apps
+
+## 諸々インストール
+## rspecもいるかも
+RUN cd baukis2 && bundle install && bin/rails db:create
