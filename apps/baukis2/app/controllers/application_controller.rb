@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include ErrorHandlers
   layout :set_layout
   private def set_layout
     if params[:controller].match(%r{\A(staff|admin|customer)/})
